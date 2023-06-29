@@ -1,0 +1,80 @@
+.side-menu-container {
+    height: calc(100vh - 65px) ;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.side-menu-container ul {
+    width: 100%;
+    
+    
+}
+
+.side-menu-container a {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.side-menu-container span {
+    font-size: 0.7em;
+    font-weight: 500px;
+}
+
+.side-menu-container li:hover {
+    background-color: #E8E8E8;
+}
+
+.dark .side-menu-container li:hover {
+    background-color: black;
+}
+
+
+.side-menu-icon {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 5px 0;
+}
+
+/* Icons */
+.light .side-menu-icon {
+    fill: #9A9A9A;
+   
+}
+
+.dark {
+    background-color: #1A1A1A;
+    
+}
+
+.dark svg {
+    fill: white;
+}
+
+.dark span {
+    color: white;
+}
+
+.dark li:hover {
+    background-color: #E0E0E0;
+}
+
+.dark  #cross-icon {
+    stroke: black;
+}
+
+.light  #cross-icon {
+    stroke: white;
+}
+
+

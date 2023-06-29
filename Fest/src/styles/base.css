@@ -1,0 +1,221 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+/* Emoji CSS */
+@font-face {
+  font-family: NotoColorEmojiLimited;
+  unicode-range: U+1F1E6-1F1FF;
+  src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+}
+
+.icon {
+  font-family: 'NotoColorEmojiLimited', -apple-system, BlinkMacSystemFont, 
+  'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+
+/* Global styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Custom Base */
+
+#app {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-y: hidden;
+}
+button {
+  background: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  justify-content: center;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  columns: inherit;
+  color: inherit;
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style modes */
+
+.light {
+  fill: #101d42;;
+  fill-rule:nonzero;
+  stroke: #101d42;
+  color: #101D42;
+  background-color: white;
+}
+
+.light a {
+  color: #101D42;
+}
+
+.dark {
+  background-color: #343434;
+  stroke: white;
+  color: white;
+  fill: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark h1 {
+  color: white;
+}
+
+/* Page content styling */
+.page-container {
+  width: calc(100vw - 75px);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.page-content-container {
+
+  height: calc(100vh - 65px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+hr {
+  margin: 0;
+}
+
+.bg-modal {
+  width: 100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  display:none;
+  justify-content:center;
+  align-items: center;
+}
+
+
+/* Loading icon */
+.loading-container {
+  height: 30%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.loading-container img {
+  height: 80px;
+}
+
+/* Scroll bar */
+main::-webkit-scrollbar {
+  width: 5px;
+}
+
+main::-webkit-scrollbar-track {
+background-color: none;
+border-radius: 20px;
+}
+
+main::-webkit-scrollbar-thumb {
+background-color: #C6C6C6;
+border-radius: 20px;
+}
+

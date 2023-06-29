@@ -1,0 +1,134 @@
+.outerouterdiv {
+    border-radius:15px;
+}
+
+.close-button-container {
+    position:absolute;
+    z-index:1;
+    width:100%;
+}
+
+.outerouterdiv .close-button-x {
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #777E94 !important;
+    color: white;
+    cursor: pointer;
+    /* display: flex; */
+    right:30px;
+    bottom: -30px;
+    align-items: center;
+    float:right;
+}
+
+.outer {
+    clear: both;
+    text-align: center;
+    position: relative;
+    height: 600px;
+    width: 350px;
+    flex-direction: column;
+    box-align: center;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+}
+
+.join {
+    /* background-color:#101D42; */
+    color:white;
+    font-weight:700;
+    font-size: 2em;
+}
+
+.lowerdiv form{
+    padding-top:20px;
+}
+
+.lowerdiv form h2 {
+    font-weight:600;
+}
+
+.signup-button-container, #google-signin-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#google-signin-button{
+    padding-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.upperdiv {
+    background-color:#101D42;
+    color:white;
+    border-radius: 15px;
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[name=email] {
+    border: 1px solid #9A9A9A;
+    border-radius:1em;
+    padding: 1em;
+    width: 250px;
+}
+
+input[name=password] {
+    border: 1px solid #9A9A9A;
+    border-radius:1em;
+    padding: 1em;
+    width: 250px;
+}
+
+.rectangleleft {
+    height: 40px;
+    width: 80px;
+    background-color: #FF8C42;
+    margin-left: auto;;
+}
+
+.rectangleleft {
+    height: 50px;
+    width: 80px;
+    background-color: #FF8C42;
+    border-radius: 10px;
+    margin-left: 27px;
+    float:left;
+}
+
+.signup {
+    background-color: #2E81DA;
+    border-color: #2E81DA;
+    color: white;
+    height: 50px;
+    width: 280px;
+    border-radius: 20px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600px;
+    cursor:pointer;
+}
+
+/* google button */
+div .abcRioButton .abcRioButtonLightBlue{
+    height:50px;
+    width:150px;
+    border-radius:10px;
+}
+
+.signin {
+    font-size: 80%
+}
+
